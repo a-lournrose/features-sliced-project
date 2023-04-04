@@ -4,13 +4,15 @@ import cls from './AppLink.module.scss';
 import {Link, LinkProps} from "react-router-dom";
 
 export enum AppLinkTheme {
-    PRIMARY= 'primary',
+    PRIMARY = 'primary',
     SECONDARY = 'secondary',
 }
-interface AppLinkProps extends LinkProps{
+
+interface AppLinkProps extends LinkProps {
     className?: string;
     theme?: AppLinkTheme;
 }
+
 export const AppLink: FC<AppLinkProps> = (props) => {
     const {
         to,
